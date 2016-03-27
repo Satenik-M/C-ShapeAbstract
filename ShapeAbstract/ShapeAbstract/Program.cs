@@ -17,12 +17,15 @@ namespace ShapeAbstract
             //tr.Paint();
 
 
-            Rectangle r = new Rectangle();
-            r.Height = 5;
-            r.Width = 10;
-            r.Paint();
-            Console.WriteLine();
-            r.Draw();
+            //Rectangle r = new Rectangle();
+            //r.Height = 5;
+            //r.Width = 10;
+            //r.Paint();
+            //Console.WriteLine();
+            //r.Draw();
+            IsoscelesTriangle it = new IsoscelesTriangle();
+            it.Height = 10;
+            it.Paint();
             Console.ReadLine();
         }
     }

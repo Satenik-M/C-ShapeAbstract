@@ -8,7 +8,7 @@ namespace ShapeAbstract
 {
     class IsoscelesTriangle : Shape
     {
-        public override void Draw()
+        public override void Paint()
         {
             for (int i = 1; i <= Height; i++)
             {
@@ -28,9 +28,24 @@ namespace ShapeAbstract
             }
         }
 
-        public override void Paint()
+        public override void Draw()
         {
-            throw new NotImplementedException();
+            for (int i = 1; i <= Height; i++)
+            {
+                for (int j = 1; j <= Height; j++)
+                {
+                    if ((j <= Height - i))
+                    {
+                        Console.Write(" ");
+                    }
+                    else
+                    {
+                        Console.Write(" *");
+                    }
+                }
+                Console.WriteLine();
+
+            }
         }
     }
 }
