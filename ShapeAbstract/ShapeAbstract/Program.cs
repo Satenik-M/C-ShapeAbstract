@@ -21,26 +21,34 @@ namespace ShapeAbstract
 
             switch (shapeIndex)
             {
-                case 1:
+                case 1://ughankyun
                     {
-                        Console.WriteLine("Please enter the height and the width of the rectangle");
-                        Console.Write("Height:");
-                        
-                        Int32.TryParse(Console.ReadLine(), out height);
+                         bool heightIsInt;
+                         bool widthIsInt;
+                         do
+                         {
+                             Console.WriteLine("Please enter the height and the width of the rectangle");
+                             Console.Write("Height:");
+                             heightIsInt = Int32.TryParse(Console.ReadLine(), out height);
 
                         Console.Write("Width:");
-                        Int32.TryParse(Console.ReadLine(), out width);
+                        widthIsInt= Int32.TryParse(Console.ReadLine(), out width);/*todo width max width to be 80*/
+                         } while ((!heightIsInt||!widthIsInt));
                         Rectangle r = new Rectangle(height, width);
                         r.Draw();
                         Console.WriteLine();
                         r.Paint();
                         break;
                     }
-                case 2:
+                case 2: //ughankyun yerankyun
                     {
-                        Console.WriteLine("Please enter the left leg height of the right triangle");
-                        Console.Write("Height:");
-                        Int32.TryParse(Console.ReadLine(), out height);
+                        
+                        do
+                        {
+                            Console.WriteLine("Please enter the left leg height of the right triangle");
+                            Console.Write("Height:");
+                        } while (!Int32.TryParse(Console.ReadLine(), out height));/*todo height max value to be 80*/
+                            
 
                         
                         RightTriangle r = new RightTriangle(height);
@@ -49,12 +57,15 @@ namespace ShapeAbstract
                         r.Paint();
                         break;
                     }
-                case 3:
+                case 3://havasarasrun yerankyun
                     {
-                        Console.WriteLine("Please enter the height of the isosceles triangle");
-                        Console.Write("Height:");
-                        Int32.TryParse(Console.ReadLine(), out height);
-
+                       
+                        do
+                        {
+                            Console.WriteLine("Please enter the height of the isosceles triangle");
+                            Console.Write("Height:");
+                        } while (!Int32.TryParse(Console.ReadLine(), out height));/*todo height max value to be 40*/
+                        
 
                         IsoscelesTriangle r = new IsoscelesTriangle(height);
                         r.Draw();
