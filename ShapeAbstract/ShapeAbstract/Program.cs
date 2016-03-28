@@ -26,6 +26,8 @@ namespace ShapeAbstract
             IsoscelesTriangle it = new IsoscelesTriangle();
             it.Height = 10;
             it.Paint();
+            Console.WriteLine();
+            it.Draw();
             Console.ReadLine();
         }
     }

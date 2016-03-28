@@ -30,17 +30,21 @@ namespace ShapeAbstract
 
         public override void Draw()
         {
-            for (int i = 1; i <= Height; i++)
+            for (int i = 0; i < Height; i++)
             {
-                for (int j = 1; j <= Height; j++)
+                for (int j = 1; j <2*Height; j++)
                 {
-                    if ((j <= Height - i))
+                    if (i==(Height-1))
                     {
-                        Console.Write(" ");
+                        Console.Write("*");
+                    }
+                    else if ((j == Height - i)||(j==Height+i))
+                    {
+                        Console.Write("*");
                     }
                     else
                     {
-                        Console.Write(" *");
+                        Console.Write(" ");
                     }
                 }
                 Console.WriteLine();
