@@ -51,5 +51,9 @@ namespace ShapeAbstract
 
             }
         }
+        public IsoscelesTriangle(int height)
+        {
+            this.Height = height;
+        }
     }
 }

@@ -44,5 +44,10 @@ namespace ShapeAbstract
                 Console.WriteLine();
             }
         }
+        public Rectangle(int height, int width)
+        {
+            this.Height = height;
+            this.Width = width;
+        }
     }
 }

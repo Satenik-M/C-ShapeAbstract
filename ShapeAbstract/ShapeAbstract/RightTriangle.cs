@@ -44,5 +44,9 @@ namespace ShapeAbstract
             }
             
         }
+        public RightTriangle(int height)
+        {
+            this.Height = height;
+        }
     }
 }
